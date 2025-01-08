@@ -1,2 +1,2 @@
 # Pizza-Clicker
-Jogo de navegador estilo Point Clicker
+Jogo de navegador simples, estilo Point Clicker.
