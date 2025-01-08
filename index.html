@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Clicker</title>
+  <link rel="icon" href="img/pizza3.png" type="image/png">
+
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <h1>Pizza Clicker</h1>
+  <div id="money">Dinheiro: $0</div>
+  <img id="pizza" src="img/pizza-removebg-preview.png" alt="Pizza">
+  <div id="score">Pizzas: 0</div>
+  <button onclick="openStore()">Loja</button>
+  <button id="prestige" onclick="prestige()" disabled>Prestígio</button>
+  <button id="company" onclick="openCompany()">Empresa</button>
+  <button id="use-money" onclick="openMoneyUsePage()">Usar Dinheiro</button>
+
+  <div id="store">
+    <h2>Loja</h2>
+    <div id="store-items">
+      <div class="store-item">
+        <span>Forno (1 pizza/segundo)</span>
+        <button onclick="buyItem(10, 1)">Comprar - 10 Pizzas</button>
+      </div>
+      <div class="store-item">
+        <span>Chef (5 pizzas/segundo)</span>
+        <button onclick="buyItem(50, 5)">Comprar - 50 Pizzas</button>
+      </div>
+      <div class="store-item">
+        <span>Padaria (20 pizzas/segundo)</span>
+        <button onclick="buyItem(200, 20)">Comprar - 200 Pizzas</button>
+      </div>
+      <div class="store-item">
+        <span>Pizzaria (50 pizzas/segundo)</span>
+        <button onclick="buyItem(500, 50)">Comprar - 500 Pizzas</button>
+      </div>
+    </div>
+    <button onclick="closeStore()">Fechar Loja</button>
+  </div>
+
+  <div id="company-page">
+    <h2>Pedidos da Empresa</h2>
+    <div id="company-orders">
+      <!-- Example of a dynamic order -->
+    </div>
+    <div class="company-buttons">
+      <button onclick="closeCompany()">Fechar Empresa</button>
+    </div>
+  </div>
+
+  <div id="money-use-page">
+    <h2>Usar Dinheiro</h2>
+    <div class="money-item">
+      <span>Aumentar produção em 500 pizzas/segundo</span>
+      <button onclick="upgradeProduction(100000)" id="money-btn-1">Comprar - $100,000</button>
+    </div>
+    <div class="money-item">
+      <span>Aumentar produção em 1000 pizzas/segundo</span>
+      <button onclick="upgradeProduction(250000)" id="money-btn-2">Comprar - $250,000</button>
+    </div>
+    <div class="money-item">
+      <span>Aumentar produção em 2500 pizzas/segundo</span>
+      <button onclick="upgradeProduction(500000)" id="money-btn-3">Comprar - $500,000</button>
+    </div>
+    <div class="money-item">
+      <span>Aumentar produção em 5000 pizzas/segundo</span>
+      <button onclick="upgradeProduction(1000000)" id="money-btn-4">Comprar - $1,000,000</button>
+    </div>
+    <div class="money-buttons">
+      <button onclick="closeMoneyUsePage()">Fechar</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
